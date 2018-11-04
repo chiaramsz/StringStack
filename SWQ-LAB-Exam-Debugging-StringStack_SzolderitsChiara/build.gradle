@@ -1,0 +1,34 @@
+plugins {
+	id "java"
+}
+
+repositories {
+   mavenCentral()
+   //jcenter()
+}
+
+sourceSets {
+    main.java.srcDirs = ['src']
+    test.java.srcDirs = ['test']
+}
+
+defaultTasks 'clean', 'build'
+task incrementalbuild(dependsOn: [build])
+
+
+dependencies {
+	testCompile 'junit:junit:4.+'
+}
+
+tasks.matching {it instanceof Test}.all {
+    //events "started","passed","skipped","failed"
+    testLogging.events = ["failed", "passed", "skipped"]
+}
+
+test {
+    testLogging {
+        // visible at console when running tests
+        showStandardStreams = true
+    }
+    systemProperty 'java.util.logging.config.file', 'logging.config'
+}

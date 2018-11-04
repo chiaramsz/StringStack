@@ -1,0 +1,7 @@
+
+Nov. 04, 2018 1:22:19 NACHM. at.fhj.itm.swd.StringStackTest setup
+INFO: Starting test: testPushFullStack
+Nov. 04, 2018 1:22:19 NACHM. at.fhj.itm.swd.StringStackTest setup
+INFO: Starting test: testPopEmptyStack
+Nov. 04, 2018 1:22:19 NACHM. at.fhj.itm.swd.StringStack pop
+WARNING: Capacity IllegalArgumentException:0 elementIndex
